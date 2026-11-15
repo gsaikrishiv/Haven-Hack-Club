@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dcvlfl2eg5n7u"]
+
+[node name="UFO" type="Area2D" unique_id=1098284393]
+collision_layer = 4

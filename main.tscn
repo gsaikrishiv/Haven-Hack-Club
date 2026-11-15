@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bdjeut1w3recs"]
+
+[ext_resource type="Script" uid="uid://dd20o4ewnpit8" path="res://camera_2d.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c802mg41qihln" path="res://plane.tscn" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpa7o"]
+size = Vector2(1163.5, 115)
+
+[node name="Main" type="Node2D" unique_id=1984531767]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1210225972]
+offset = Vector2(576, 324)
+script = ExtResource("1_0xm2m")
+
+[node name="plane" parent="." unique_id=1678883034 instance=ExtResource("1_ig7tw")]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1570977582]
+position = Vector2(278, 167)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1701032620]
+position = Vector2(293, 484)
+shape = SubResource("RectangleShape2D_wpa7o")
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=1920097734]
+offset_left = -282.0
+offset_top = 297.0
+offset_right = 880.0
+offset_bottom = 545.0
+color = Color(0.20906588, 0.5806899, 7.70092e-07, 1)

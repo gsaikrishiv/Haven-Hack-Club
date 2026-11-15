@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c802mg41qihln"]
+
+[ext_resource type="Script" uid="uid://dux4rcwxna23j" path="res://plane.gd" id="1_dpar4"]
+[ext_resource type="Texture2D" uid="uid://7emc4w47mq6r" path="res://vecteezy_illustration-of-fighter-jet-vector_35718611-removebg-preview.png" id="2_dpar4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpa7o"]
+size = Vector2(123, 127)
+
+[node name="plane" type="CharacterBody2D" unique_id=1678883034]
+script = ExtResource("1_dpar4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=602939260]
+position = Vector2(20, 5)
+scale = Vector2(-0.4, 0.5)
+texture = ExtResource("2_dpar4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587193576]
+position = Vector2(25, 7)
+shape = SubResource("RectangleShape2D_wpa7o")
